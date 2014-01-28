@@ -1,0 +1,42 @@
+{
+    "name": "generator-alchemy-quickstart",
+    "version": "0.2.0",
+    "description": "Alchemy QuickStart is an Yeoman generator for quick projects.",
+    "keywords": [
+        "yeoman-generator",
+        "yeoman",
+        "webapp",
+        "web",
+        "simple",
+        "easy",
+        "jquery",
+        "alchemy",
+        "quickstart"
+    ],
+    "homepage": "https://github.com/marcol/generator-alchemy-quickstart",
+    "bugs": "https://github.com/marcol/generator-alchemy-quickstart/issues",
+    "author": {
+        "name": "Marco Dias Lopes",
+        "url": "https://github.com/marcol"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/marcol/generator-alchemy-quickstart.git"
+    },
+    "scripts": {},
+    "dependencies": {
+        "yeoman-generator": "~0.13.0"
+    },
+    "devDependencies": {},
+    "peerDependencies": {
+        "yo": ">=1.0.0"
+    },
+    "engines": {
+        "node": ">=0.8.0",
+        "npm": ">=1.2.10"
+    },
+    "readmeFilename": "readme.md",
+    "licenses": [{
+        "type": "MIT"
+    }]
+}

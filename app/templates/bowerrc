@@ -1,0 +1,3 @@
+{
+	"directory" : "<%= projSource %>/bower_components"
+}

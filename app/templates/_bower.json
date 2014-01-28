@@ -1,0 +1,20 @@
+{
+    "name": "<%= _.slugify(projName) %>",
+    "version": "<%= projVersion %>",
+    "main": "index.html",
+    "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components",
+      "app/bower_components",
+      "<%= projSource %>/bower_components",
+      "test",
+      "tests"
+    ],
+    "dependencies": {
+        "normalize-css": "*",
+        "html5-polyfills": "*"<% if (includejQuery) { %>,
+        "jquery": "~2.0.3"<% } %><% if (includeZepto) { %>,
+        "zepto": "~1.1.2"<% } %>
+    }
+}
