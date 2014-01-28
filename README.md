@@ -50,12 +50,6 @@ HTML5 and ES5 polyfills form https://github.com/remy/polyfills by Remy Sharp
  * Start watching files:
   * Reloads the webpage on any resource change
 
-#### grunt serve:build
-
- * Runs the build process
- * Starts the node server (connect)
-
-
 ## Optional Features
 
 ### jQuery
