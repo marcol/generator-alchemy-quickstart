@@ -1,4 +1,4 @@
-# generator-alchemy-quickstart [![Build Status](https://secure.travis-ci.org/marcol/generator-alchemy-quickstart.png?branch=master)](https://travis-ci.org/marcol/generator-alchemy-quickstart)
+# generator-alchemy-quickstart [![Build Status](https://secure.travis-ci.org/marcol/generator-alchemy-quickstart.svg?branch=master)](https://travis-ci.org/marcol/generator-alchemy-quickstart)
 
 
 ## Getting Started
