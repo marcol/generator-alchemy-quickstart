@@ -1,34 +1,31 @@
 {
 
-    // jshint options http://www.jshint.com/docs/options/
-    
-    "indent": 4,
-
-    // Enforcing Options
     "bitwise": true,
     "camelcase": true,
     "curly": true,
     "eqeqeq": true,
+    "es3": false,
     "forin": true,
+    "freeze": true,
     "immed": true,
+    "indent": 4,
     "latedef": true,
     "newcap": true,
     "noarg": true,
     "noempty": true,
-    "nonew": false,
+    "nonbsp": true,
+    "nonew": true,
     "plusplus": false,
     "quotmark": true,
-    "regexp": true,
     "undef": true,
     "unused": true,
     "strict": true,
-    "trailing": true,
     "maxparams": 4,
-    "maxdepth": 5,
-    // "maxstatements": 5,
-    "maxlen": 240,
+    "maxdepth": 4,
+    "maxstatements": 10,
+    "maxcomplexity": 5,
+    "maxlen": 80,
            
-    // Relaxing Options
     "asi": false,
     "boss": false,
     "debug": false,
@@ -43,39 +40,39 @@
     "laxbreak": false,
     "laxcomma": false,
     "loopfunc": false,
+    "maxerr": false,
     "moz": false,
     "multistr": false,
-    "onecase": false,
+    "notypeof": false,
     "proto": false,
     "scripturl": false,
-    "regexdash": false,
-    "scripturl": false,
-    "smarttabs": true,
     "shadow": false,
     "sub": false,
     "supernew": false,
     "validthis": false,
-
-    // Environments
-    "browser": false,
+    "noyield": false,
+    
+    "browser": true,
     "couch": false,
     "devel": false,
     "dojo": false,
     "jquery": false,
     "mootools": false,
     "node": false,
-    "nonstandard": true,
+    "nonstandard": false,
     "phantom": false,
     "prototypejs": false,
     "rhino": false,
     "worker": false,
     "wsh": false,
     "yui": false,
-
-    // Legacy
+    
+    "gcl": false,
     "nomen": true,
     "onevar": true,
     "passfail": false,
+    "smarttabs": false,
+    "trailing": true,
     "white": true
 
 }
