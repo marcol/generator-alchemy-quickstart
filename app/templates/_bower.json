@@ -12,9 +12,8 @@
       "tests"
     ],
     "dependencies": {
-        "normalize-css": "*",
-        "html5-polyfills": "*"<% if (includejQuery) { %>,
-        "jquery": "~2.0.3"<% } %><% if (includeZepto) { %>,
-        "zepto": "~1.1.2"<% } %>
+        "normalize-css": "*"<% if (includejQuery) { %>,
+        "jquery": "^2.0.3"<% } %><% if (includeZepto) { %>,
+        "zepto": "^1.1.2"<% } %>
     }
 }
