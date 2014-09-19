@@ -15,7 +15,7 @@ module.exports = function (grunt) {
         config: {
             src: '<%= projSource %>',
             dist: '<%= projDist %>',
-            images: 'bin'
+            bin: '<%= projSource %>/bin'
         },
 
         'bower-install': {
@@ -34,16 +34,16 @@ module.exports = function (grunt) {
                     '<%%= config.src %>/*.html',
                     '.tmp/styles/{,*/}*.css',
                     '{.tmp,<%%= config.src %>}/scripts/{,*/}*.js',
-                    '<%%= config.src %>/<%%= config.images %>/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
+                    '<%%= config.bin %>/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
                 ]
             }
         },
 
         connect: {
             options: {
-                port: 9000,
+                port: 9001,
                 livereload: 35729,
-                hostname: 'localhost' // '0.0.0.0' to access the server from outside
+                hostname: 'localhost' // '0.0.0.0' for outside access
             },
             livereload: {
                 options: {
@@ -75,13 +75,11 @@ module.exports = function (grunt) {
 
     // Tasks
     grunt.registerTask('default', ['jshint']);
-
-    grunt.registerTask('serve', function () {
-        grunt.task.run([
-            'clean:server',
-            'connect:livereload',
-            'watch'
-        ]);
-    });
+    grunt.registerTask('lint', ['jshint']);
+    grunt.registerTask('serve', [
+        'clean:server',
+        'connect:livereload',
+        'watch'
+    ]);
 
 };
