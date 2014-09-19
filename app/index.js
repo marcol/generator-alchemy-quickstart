@@ -31,7 +31,8 @@
             });
         });
 
-        this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
+        this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname,
+                '../package.json')));
     };
 
     util.inherits(AlchemyGenerator, yeoman.generators.Base);
@@ -77,17 +78,24 @@
 
         this.prompt(prompts, function (props) {
 
-            var generator = this;
+            var generator = this,
+                DEFAULTS = {
+                    'projName': props.projName,
+                    'projAuthor': props.projAuthor,
+                    'projVersion': '0.1.0',
+                    'projDescription': 'My quick start project',
+                    'projUrl': '',
+                    'projRepository': '',
+                    'projSource': 'src',
+                    'projDist': 'build'
+                },
+                key;
 
-            this.projName = props.projName;
-            this.projAuthor = props.projAuthor;
-            this.projVersion = '0.0.1';
-            this.projDescription = 'My quick start project';
-            this.projUrl = '';
-            this.projKeywords = '';
-            this.projRepository = '';
-            this.projSource = 'app';
-            this.projDist = 'dist';
+            for (key in DEFAULTS) {
+                if (DEFAULTS.hasOwnProperty(key)) {
+                    generator[key] = DEFAULTS[key];
+                }
+            }
 
             // get features
             this.includejQuery = false;
@@ -104,12 +112,6 @@
 
     AlchemyGenerator.prototype.app = function app() {
 
-        // app folder strcture
-        this.mkdir(this.projSource);
-        this.mkdir(this.projSource + '/scripts');
-        this.mkdir(this.projSource + '/styles');
-        this.mkdir(this.projSource + '/bin');
-
         // setup files
         this.template('_package.json', 'package.json');
         this.template('_bower.json', 'bower.json');
@@ -124,18 +126,36 @@
         this.template('_crossdomain.xml', this.projSource + '/crossdomain.xml');
     };
 
-    AlchemyGenerator.prototype.scripts = function scripts() {
-        this.copy('scripts/_main.js', this.projSource + '/scripts/main.js');
+    AlchemyGenerator.prototype.folders = function folders() {
+        this.mkdir(this.projSource);
+        this.mkdir(this.projSource + '/scripts');
+        this.mkdir(this.projSource + '/styles');
+        this.mkdir(this.projSource + '/bin');
     };
 
-    AlchemyGenerator.prototype.styles = function styles() {
-        this.template('styles/styles.css', this.projSource + '/styles/styles.css');
+    AlchemyGenerator.prototype.resources = function scripts() {
+        this.copy('scripts/_main.js', this.projSource + '/scripts/main.js');
+        this.template('styles/styles.css', this.projSource +
+                '/styles/styles.css');
     };
 
     AlchemyGenerator.prototype.dotfiles = function dotfiles() {
-        this.copy('editorconfig', '.editorconfig');
-        this.copy('jshintrc', '.jshintrc');
-        this.template('bowerrc', '.bowerrc');
+
+        var files = [
+                'bowerrc',
+                'editorconfig',
+                'gitignore',
+                'jsbeatifyrc',
+                'jscsrc',
+                'jshintrc',
+                'npmignore'
+            ],
+            ln = files.length;
+
+        while(ln--) {
+            this.template(files[ln], '.' + files[ln]);
+        }
+
     };
 
     // export
