@@ -44,8 +44,7 @@
         "use-isnan": 1,
         "valid-jsdoc": [1, {
             "prefer": {
-                "return": "returns",
-                "requireReturn": false,
+                "requireReturn": true,
                 "requireReturnDescription": false,
                 "requireParamDescription": true
             }
@@ -183,7 +182,7 @@
         "max-depth": [1, 3],
         "max-len": [1, 80, 4],
         "max-params": [1, 4],
-        "max-statements": [1, 8],
+        "max-statements": [1, 10],
         "no-bitwise": 1,
         "no-plusplus": 0,
 
