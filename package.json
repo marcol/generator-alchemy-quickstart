@@ -1,6 +1,6 @@
 {
     "name": "generator-alchemy-quickstart",
-    "version": "0.5.0",
+    "version": "1.0.0",
     "description": "Alchemy QuickStart is an Yeoman generator for quick projects.",
     "keywords": [
         "yeoman-generator",
